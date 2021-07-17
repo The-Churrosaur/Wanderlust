@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://hship.tscn" type="PackedScene" id=1]
+[ext_resource path="res://manager.tscn" type="PackedScene" id=2]
+
+[node name="Main" type="Node2D"]
+
+[node name="hship" parent="." instance=ExtResource( 1 )]
+position = Vector2( 158.929, 0 )
+balance = 200
+starting_humanity = 300
+
+[node name="hship2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 158.088, 114.362 )
+balance = -100
+velocity = 1
+wages = 20
+
+[node name="Manager" parent="." instance=ExtResource( 2 )]
+path_1 = NodePath("../hship")
+path_2 = NodePath("../hship2")
