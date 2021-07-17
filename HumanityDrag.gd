@@ -9,6 +9,9 @@ export var velocity = 10 # movement towards baseline, h per seond
 export var wages = 10
 export var starting_humanity = 0
 
+export var conscription_rate = 0.1 # percentage
+export var essential_crew = 10
+
 onready var label = $HBoxContainer/Label
 onready var b1 = $HBoxContainer/Button
 onready var b2 = $HBoxContainer/Button2
@@ -72,6 +75,10 @@ func set_label():
 
 func hpc(): # humanity per capita
 	return humanity / population
+
+func get_conscripts() -> int:
+#	print("getc: ", conscription_rate * population)
+	return int(conscription_rate * population)
 
 func get_leavers(shipB) -> int: # population that wants to go
 	

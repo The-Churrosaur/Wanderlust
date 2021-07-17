@@ -12,9 +12,10 @@ starting_humanity = 300
 
 [node name="hship2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 158.088, 114.362 )
+population = 50
 balance = -100
 velocity = 1
-wages = 20
+essential_crew = 40
 
 [node name="Manager" parent="." instance=ExtResource( 2 )]
 path_1 = NodePath("../hship")
